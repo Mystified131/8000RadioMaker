@@ -5,11 +5,11 @@ import re
 import collections
 import operator
  
-for subdir, dirs, files in os.walk('C:\\Users\\mysti\\Coding\\BFFMaker\\Audio'):
+for subdir, dirs, files in os.walk('C:\\Users\\mysti\\Coding\\8000RadioMaker\\Audio'):
     for file in files:
         filepath = subdir + os.sep + file
 
-        if (filepath.endswith(".mp3")) or (filepath.endswith(".sfk")):
+        if (filepath.endswith(".wav")) or (filepath.endswith(".sfk")):
             os. remove(filepath) 
 
 print("")

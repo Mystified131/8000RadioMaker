@@ -26,7 +26,7 @@ for subdir, dirs, files in os.walk(srchstr):
     for file in files:
         filepath = subdir + os.sep + file
 
-        if  filepath.endswith(".m3u") and '8000' not in filepath:
+        if  filepath.endswith(".m3u") and "_" not in filepath:
 
             contents.append(filepath)
 
@@ -52,7 +52,7 @@ filst = []
 
 #limlen = sizdict[contents[0]]
 
-limlen = 4000
+limlen = 600
 
 pl1 = []
 
