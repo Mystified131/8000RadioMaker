@@ -52,7 +52,7 @@ filst = []
 
 #limlen = sizdict[contents[0]]
 
-limlen = 500
+limlen = 4000
 
 pl1 = []
 
