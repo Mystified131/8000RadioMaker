@@ -79,7 +79,7 @@ for x in range(1, (ctr + 1)):
     p = (Path(finlst[x]))
     trkloc = str(p.parts[-2])
     outr = os.path.basename(elem)
-    outstr = 'C:\\Users\\mysti\\Coding\\8000RadioMaker\\Audio\\' + str((x + 1)/1000) + "_" + str(tim) + "_" + trkloc + "-__" + outr
+    outstr = 'C:\\Users\\mysti\\Coding\\8000RadioMaker\\Audio\\' + str((x + 1)/100) + "_" + str(tim) + "_" + trkloc + "-__" + outr
     outstrb = str(x) + "_" + trkloc + ": " + outr
     shutil.copy(elem, outstr)
     playlst.append(outstrb)
