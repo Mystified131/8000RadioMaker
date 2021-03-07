@@ -1,3 +1,5 @@
+#Here a list of track addresses is made
+
 pl = []
 
 infile = open("Zimmer.m3u", "r")
@@ -12,6 +14,8 @@ infile.close()
 
 playlist = []
 
+#If the track from the address does not contain the word, "Mix", it is added to an output list
+
 for elem in pl:
     if "mix" not in elem and "Mix" not in elem:
         playlist.append(elem)
@@ -24,6 +28,8 @@ for elem in playlist:
     outfile.write(elem + '\n')
 
 outfile.close()   
+
+#The output list contains only non-"Mix"-entitled tracks
 
 outfile = open(oustr, "w")
 

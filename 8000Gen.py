@@ -27,6 +27,8 @@ tim = ("".join(list))
 
 #srchstr = "C:\\Users\\mysti\\Media_Files\\Sounds\\OlderSounds"
 
+#This code scans the list on the text file for track addresses
+
 srchstr = "Shuffled_Playlist.txt"
 
 content = []
@@ -44,6 +46,8 @@ while plist:
 infile.close()
 
 leng = len(content)
+
+#This code uses organic "filters" to derive track addresses from the main original list
 
 for y in range(50):
  
@@ -64,6 +68,8 @@ for y in range(50):
         finlst.append(adstr)
 
 #ctr = len(finlst)
+
+#This code takes the chosen track list and generates companion lists for exporting
 
 ctr = 25
 
@@ -87,6 +93,8 @@ for x in range(1, (ctr + 1)):
 
 print("")
 print(playlst)     
+
+#This code exports the various companion playlist documents
 
 oustr = "8000_Playlist_" + tim + ".m3u"
 

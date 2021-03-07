@@ -17,6 +17,7 @@ for i in right_now:
 
 tim = ("".join(list))
    
+#This code scans the directory for playlist files
 
 contents = []
 
@@ -26,31 +27,13 @@ for subdir, dirs, files in os.walk(srchstr):
     for file in files:
         filepath = subdir + os.sep + file
 
-        if  filepath.endswith(".m3u") and "_" not in filepath:
+        if  filepath.endswith(".m3u") and "8000" not in filepath:
 
             contents.append(filepath)
 
-#sizdict = {}
-
-#for x in range(7):
-
-    #pl = []
-
-    #infile = open(contents[x], "r")
-
-    #plist = infile.readline()
-
-    #while plist:
-        #pl.append(plist.strip())
-        #plist = infile.readline()
-
-    #infile.close()
-
-    #sizdict[contents[x]] = len(pl)
+#This code shuffles the various playlists into one final list
 
 filst = []
-
-#limlen = sizdict[contents[0]]
 
 limlen = 600
 
@@ -180,6 +163,8 @@ while plist:
 
 infile.close()
 
+#This code creates the actual shuffle, making a new list from many older lists
+
 spl = []
 
 for x in range(limlen):
@@ -234,6 +219,8 @@ with open("temp.txt") as f:
             outfile.write(line)
 
 outfile.close()
+
+#And here is a little note from the console
 
 print("")
 
